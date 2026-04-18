@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@0,900;1,900&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sekuya');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Sekuya", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-noto: "Noto Sans KR", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-sekuya: "Sekuya", sans-serif;
+
+  --primary-lime: #D2D904;
+  --bright-yellow: #F2E205;
+  --olive-green: #736B29;
+  --muted-gold: #A68C44;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #000000;
+  }
+
+  body {
+    @apply antialiased text-white;
+    cursor: none;
+    font-family: var(--font-noto);
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+  .text-outline-lime {
+    color: transparent;
+    -webkit-text-stroke: 1px #D2D904;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .perspective-2000 {
+    perspective: 2000px;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
